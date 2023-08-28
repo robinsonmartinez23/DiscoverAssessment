@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Discover Regression Suite_Chrome" verbose="4" thread-count="4" parallel="tests">
+
+    <listeners>
+        <listener
+                class-name="com.qa.discover.listeners.ExtentReportListener" />
+        <listener
+                class-name="com.qa.discover.listeners.TestAllureListener" />
+        <listener
+                class-name="com.qa.discover.listeners.AnnotationTransformer" />
+    </listeners>
+
+    <test name="Login Page Test">
+        <classes>
+            <class name="com.qa.discover.tests.LoginPageTest" />
+        </classes>
+    </test>
+
+    <test name="Credit Cards Test">
+        <classes>
+            <class name="com.qa.discover.tests.CreditCardsPageTest" />
+        </classes>
+    </test>
+
+    <test name="Application for Secure CC Test">
+        <classes>
+            <class name="com.qa.discover.tests.ApplicationSecurePageTest" />
+        </classes>
+    </test>
+
+    <test name="Skip Application for Secure CC Test">
+        <classes>
+            <class name="com.qa.discover.tests.TermsConditionsSecurePageTest" />
+        </classes>
+    </test>
+
+</suite>
